@@ -1,0 +1,11 @@
+el:			element
+els:		elements
+val:		validate
+inp:		input
+slct:		select
+txtArea		textarea
+prop		property
+props		properties
+err			error
+message		msg
+val 		value

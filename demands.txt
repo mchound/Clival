@@ -1,0 +1,6 @@
+- You can add whatever valid html element you want. Clival shall on it's own, determine what elements are to be validated. Elements that are validated are, select, input, textarea and form.
+- Ypu can create multiple instances of Clival and they are validated independent from each other.
+- You can add addidional elements to an existing Clival instance. This element is then validated together with other elements in the instance
+- You can make Clival skip an element by setting data-clival="novalidate"
+- Standard HTML5 attributes are used as long it is enough.
+- Settings are unique for each Clival instance, but can be changed at runtime

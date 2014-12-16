@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../PattyJS/src/js/Patty-0.0.1.js"></script>
+    <script src="js/Clival-0.2.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,100" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles/site.css">
+</head>
+
+<body>
+
+    <form id="my-form" class="form">
+
+        <h1>Clival Validation Form</h1>
+
+        <div class="row">
+
+            <div class="col">
+                <label>Range</label>
+                <input id="one" type="number" data-clival-range="1.2,7.7" value="" data-clival-label="One" />
+            </div>
+
+            <div class="col">
+                <label>Required</label>
+                <input id="two" type="text" required value="" data-clival-label="Two" />
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label>Min</label>
+                <input type="text" min="3" />
+            </div>
+
+            <div class="col">
+                <label>Max</label>
+                <input type="text" max="13" />
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label>URL</label>
+                <input type="url" />
+            </div>
+
+            <div class="col">
+                <label>Email</label>
+                <input type="text" data-clival-type="email" />
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label>Min Length</label>
+                <input type="text" data-clival-minlength="3" />
+            </div>
+
+            <div class="col">
+                <label>Max Length</label>
+                <input type="text" data-clival-maxlength="3" />
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label>String Length</label>
+                <input type="text" data-clival-length=" 3 , 7" />
+            </div>
+
+
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+    var formVal = new Clival.instance(document.getElementById('my-form'));
+
+    </script>
+</body>
+</html>

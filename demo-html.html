@@ -10,7 +10,7 @@
 
 <body>
 
-    <form id="my-form" class="form">
+    <div id="my-form" class="form">
 
         <h1>Clival Validation Form</h1>
 
@@ -46,7 +46,7 @@
 
             <div class="col">
                 <label>URL</label>
-                <input type="url" />
+                <input type="url" data-clival-type="url" />
             </div>
 
             <div class="col">
@@ -83,11 +83,21 @@
 
         <button type="submit">Submit</button>
 
-    </form>
+    </div>
 
     <script>
 
     var formVal = new Clival.instance(document.getElementById('my-form'));
+
+    window.addEventListener('load', function(){
+
+        this.document.querySelector('button[type="submit"]').addEventListener('click', function(){
+
+            formVal.validate();
+
+        });
+
+    });
 
     </script>
 </body>
